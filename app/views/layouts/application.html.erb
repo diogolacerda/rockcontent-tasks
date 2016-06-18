@@ -8,7 +8,9 @@
 </head>
 <body>
   <header>
-    <%= render 'layouts/navigation' %>
+    <% if @current_user %>
+      <%= render 'layouts/navigation' %>
+    <% end %>
   </header>
   <main role="main">
     <%= flash_message.html_safe %>

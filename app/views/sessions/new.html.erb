@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+
+      <div class="panel panel-default">
+
+        <div class="panel-heading text-center">
+          <strong>Entrar</strong>
+        </div>
+
+        <div class="panel-body">
+
+          <%= form_tag sessions_path %>
+
+            <fieldset>
+              <div class="row">
+                <div class="col-xs-12 ">
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                      </span>
+
+                      <%= text_field_tag :login, params[:login], class: 'form-control', :placeholder => 'login' %>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                      </span>
+                      <%= password_field_tag :password, params[:password], class: 'form-control', :placeholder => 'senha' %>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block" value="Entrar">
+                  </div>
+
+                </div>
+              </div>
+            </fieldset>
+
+
+        </div>
+
+        <div class="panel-footer ">
+          <a href="" class=""> Esqueci minha senha </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
