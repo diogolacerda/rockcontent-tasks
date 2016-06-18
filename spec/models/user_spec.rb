@@ -5,4 +5,15 @@ RSpec.describe User, type: :model do
     expect(create :user).to be_valid
   end
 
+  it { should have_secure_password }
+
+  describe 'Validations' do
+    it { should validate_presence_of(:login) }
+    it { should validate_presence_of(:password) }
+  end
+
+  describe 'Relations' do
+    it { should have_many(:boards) }
+  end
+
 end
