@@ -1,7 +1,29 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
     <div class="navbar-header">
       <%= link_to "rockcontent Task", root_path, class: 'navbar-brand' %>
     </div>
-  </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="<%= boards_path %>">Boards</a>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <% if @current_user %>
+          <li>
+            <a href="<%= log_out_path %>">Sair</a>
+          </li>
+        <% else %>
+          <li>
+            <a href="<%= new_session_path %>">Efetue login para ver os Boards privados</a>
+          </li>
+        <% end %>
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
 </nav>
