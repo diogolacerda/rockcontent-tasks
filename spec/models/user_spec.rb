@@ -13,8 +13,4 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:password) }
   end
 
-  describe 'Relations' do
-    it { should have_many(:boards) }
-  end
-
 end

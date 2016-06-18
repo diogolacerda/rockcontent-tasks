@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-  # this controller does not redirect the user to the login page if he's not logged
-  skip_before_filter :authenticate_user
 
   def new
   end

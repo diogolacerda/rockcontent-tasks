@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'boards/new'
+
+  get 'boards/edit'
+
   root 'boards#index'
 
   resources :boards

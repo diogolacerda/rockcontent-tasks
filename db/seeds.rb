@@ -6,3 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create(login: "user", password: "password")
+
+TaskStatus.create([
+  {name: "To-do"},
+  {name: "In Progress"},
+  {name: "To Verify"},
+  {name: "Done"}
+])
+
+PriorityType.create([
+  {name: "High"},
+  {name: "Medium"},
+  {name: "Low"}
+])
