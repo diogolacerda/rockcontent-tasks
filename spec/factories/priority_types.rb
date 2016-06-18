@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :priority_type do
-    name "MyString"
+    name Faker::Lorem.characters(10)
   end
 end
