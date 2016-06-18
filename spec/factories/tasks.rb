@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :task do
-    name "MyString"
-    board nil
-    priority_type nil
-    task_status nil
+    association :board
+    association :priority_type
+    association :task_status
+    name Faker::Lorem.sentence(3)
   end
 end
