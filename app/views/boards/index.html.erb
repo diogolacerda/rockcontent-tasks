@@ -25,7 +25,7 @@
             <h3 class="panel-title">To-do</h3>
           </div>
           <!-- Tasks -->
-          <ul class="list-group" id="to_do_<%=board.id%>" >
+          <ul class="list-group" id="to_do_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.to_do %>
             <li class="list-group-item" id="task_<%=task.id%>" >
               <div class="row">
@@ -49,9 +49,18 @@
             <h3 class="panel-title">In Progress</h3>
           </div>
           <!-- Tasks -->
-          <ul class="list-group" id="in_progress_<%=board.id%>" >
+          <ul class="list-group" id="in_progress_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.in_progress %>
-            <li class="list-group-item"><%= task.name %></li>
+            <li class="list-group-item" id="task_<%=task.id%>" >
+              <div class="row">
+                <div class="col-xs-12"><%= task.name %></div>
+                <div class="col-xs-6"><%= task.priority_type.name %></div>
+                <div class="col-xs-6">
+                  <%= select_tag "task_status_#{task.id}", options_from_collection_for_select(@task_statuses, "id", "name", task.task_status_id), :class => "task_status_select" %>
+
+                </div>
+              </div>
+            </li>
           <% end %>
           </ul>
         </div>
@@ -64,10 +73,17 @@
             <h3 class="panel-title">To Verify</h3>
           </div>
           <!-- Tasks -->
-          <ul class="list-group" id="to_verify_<%=board.id%>" >
+          <ul class="list-group" id="to_verify_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.to_verify %>
             <li class="list-group-item" id="task_<%=task.id%>" >
-              <%= task.name %>
+              <div class="row">
+                <div class="col-xs-12"><%= task.name %></div>
+                <div class="col-xs-6"><%= task.priority_type.name %></div>
+                <div class="col-xs-6">
+                  <%= select_tag "task_status_#{task.id}", options_from_collection_for_select(@task_statuses, "id", "name", task.task_status_id), :class => "task_status_select" %>
+
+                </div>
+              </div>
             </li>
           <% end %>
           </ul>
@@ -81,10 +97,17 @@
             <h3 class="panel-title">Done</h3>
           </div>
           <!-- Tasks -->
-          <ul class="list-group" id="done_<%=board.id%>" >
+          <ul class="list-group" id="done_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.done %>
             <li class="list-group-item" id="task_<%=task.id%>" >
-              <%= task.name %>
+              <div class="row">
+                <div class="col-xs-12"><%= task.name %></div>
+                <div class="col-xs-6"><%= task.priority_type.name %></div>
+                <div class="col-xs-6">
+                  <%= select_tag "task_status_#{task.id}", options_from_collection_for_select(@task_statuses, "id", "name", task.task_status_id), :class => "task_status_select" %>
+
+                </div>
+              </div>
             </li>
           <% end %>
           </ul>
