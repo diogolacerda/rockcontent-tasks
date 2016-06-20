@@ -8,5 +8,11 @@ FactoryGirl.define do
       is_private true
     end
 
+    trait :with_task do
+      after(:create) do |instance|
+        create_list :task, 1, board: instance
+      end
+    end
+
   end
 end

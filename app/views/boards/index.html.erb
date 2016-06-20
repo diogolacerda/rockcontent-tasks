@@ -1,5 +1,94 @@
 <div class="container">
-  <h1>Boards</h1>
-  <a href="<%= new_board_path %>" class="btn  btn-primary pull-right" >Novo Board</a>
+  <div class="row">
+    <div class="col-xs-12">
+      <a href="<%= new_board_path %>" class="btn  btn-primary pull-right" >Novo Board</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="page-header">
+        Nome Board  <small>(privado / público)</small>
+        <a href="<%= new_board_path %>" class="btn  btn-primary pull-right" >Editar</a>
+      </h1>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">To-do</h3>
+        </div>
+        <!-- Tasks -->
+        <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">In Progress</h3>
+        </div>
+        <!-- Tasks -->
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="col-xs-6">Priority</div>
+            <div class="col-xs-6">
+              <select>
+                <option>Status1</option>
+                <option>Status2</option>
+                <option>Status3</option>
+              </select>
+            </div>
+            <div class="col-cd-12">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+          </li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">To Verify</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Done</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Board, type: :model do
   it "has a valid factory" do
-    expect(create :board).to be_valid
+    expect(create :board, :with_task).to be_valid
   end
 
   describe "Validations" do

@@ -15,13 +15,10 @@ ActiveRecord::Schema.define(version: 20160618010027) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "name"
-    t.integer  "user_id"
     t.boolean  "is_private"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "boards", ["user_id"], name: "index_boards_on_user_id"
 
   create_table "priority_types", force: :cascade do |t|
     t.string   "name"

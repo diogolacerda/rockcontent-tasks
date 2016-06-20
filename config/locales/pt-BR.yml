@@ -221,3 +221,7 @@ pt-BR:
       board:
         name: "Nome"
         is_private: "Privado"
+      board/tasks:
+        name: "Nome da Tarefa"
+        priority_type: "Prioridade da Tarefa"
+        task_status: "Status da Tarefa"

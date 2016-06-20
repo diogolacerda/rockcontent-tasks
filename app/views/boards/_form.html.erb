@@ -7,9 +7,24 @@
     </div>
 
     <div class="form-group">
-      <label for="">Nome*</label>
-      <%= f.input :name, label: false  %>
+      <%= f.input :name, label: "Nome"  %>
     </div>
+
+    <div class="form-group">
+      <fieldset>
+        <legend>Tarefas</legend>
+        <%= f.fields_for :tasks do |t| %>
+          <% if t.object.id? %>
+            <%= t.check_box '_destroy' %> Remover
+          <% end %>
+          <%= t.input :name, label: "Nome" %>
+          <%= t.association :priority_type, label: "Prioridade", include_blank: "Selecione a Prioridade" %>
+          <%= t.association :task_status, label: "Status", include_blank: "Selecione o Status" %>
+          <hr>
+        <% end %>
+      </fieldset>
+    </div>
+
 
     <div class="form-group">
       <button type="submit" class="btn btn-primary pull-right">Salvar</button>
