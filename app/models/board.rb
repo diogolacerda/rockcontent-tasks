@@ -4,4 +4,6 @@ class Board < ActiveRecord::Base
 
   validates_presence_of :name
 
+  scope :public_board, -> { where(is_private: false) }
+
 end

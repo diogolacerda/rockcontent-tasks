@@ -48,6 +48,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'faker'
   gem 'selenium-webdriver'
+  gem 'database_cleaner'
 end
 
 group :development do

@@ -6,3 +6,4 @@ GEMS
  factory_girl: database fixtures
  capybara: acceptance test simulating how a real user interact with the app
  Faker: generates data at random
+ database_cleaner: a clean database for every test case

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :board do
-    name Faker::Hacker.say_something_smart
+    name {Faker::Hacker.say_something_smart}
 
     is_private false
 

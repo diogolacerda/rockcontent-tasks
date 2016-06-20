@@ -1,7 +1,13 @@
 class BoardsController < ApplicationController
 
   def index
-    current_user
+    @task_statuses = TaskStatus.all
+    if current_user
+      @boards = Board.all
+    else
+      @boards = Board.public_board
+    end
+
   end
 
   def new
