@@ -218,6 +218,9 @@ pt-BR:
     pm: ''
   activerecord:
     attributes:
+      user:
+        password: "Senha"
+        password_confirmation: "Confirmação de Senha"
       board:
         name: "Nome"
         is_private: "Privado"

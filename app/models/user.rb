@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  validates_presence_of :login
+  validates :login, :presence => true,  :uniqueness => true
 end
