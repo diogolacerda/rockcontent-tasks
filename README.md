@@ -37,6 +37,12 @@ Run the seed to create the base data:
 ```console
 rake db:seed
 ```
+
+To run all tests execute the following command in the root folder of the project
+
+```console
+rspec
+```
 Unit Tests
 ---------------
 Unit tests for all models validations and relationships
