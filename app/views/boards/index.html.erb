@@ -27,7 +27,7 @@
           <!-- Tasks -->
           <ul class="list-group" id="to_do_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.to_do %>
-            <li class="list-group-item" id="task_<%=task.id%>" >
+            <li class="list-group-item" id="task_<%=task.id%>" data-task-id="<%=task.id%>" >
               <div class="row">
                 <div class="col-xs-12"><%= task.name %></div>
                 <div class="col-xs-6"><%= task.priority_type.name %></div>
@@ -51,7 +51,7 @@
           <!-- Tasks -->
           <ul class="list-group" id="in_progress_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.in_progress %>
-            <li class="list-group-item" id="task_<%=task.id%>" >
+            <li class="list-group-item" id="task_<%=task.id%>" data-task-id="<%=task.id%>" >
               <div class="row">
                 <div class="col-xs-12"><%= task.name %></div>
                 <div class="col-xs-6"><%= task.priority_type.name %></div>
@@ -75,7 +75,7 @@
           <!-- Tasks -->
           <ul class="list-group" id="to_verify_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.to_verify %>
-            <li class="list-group-item" id="task_<%=task.id%>" >
+            <li class="list-group-item" id="task_<%=task.id%>" data-task-id="<%=task.id%>" >
               <div class="row">
                 <div class="col-xs-12"><%= task.name %></div>
                 <div class="col-xs-6"><%= task.priority_type.name %></div>
@@ -99,7 +99,7 @@
           <!-- Tasks -->
           <ul class="list-group" id="done_<%=board.id%>" data-board-id="<%=board.id%>" >
           <% for task in board.tasks.done %>
-            <li class="list-group-item" id="task_<%=task.id%>" >
+            <li class="list-group-item" id="task_<%=task.id%>" data-task-id="<%=task.id%>" >
               <div class="row">
                 <div class="col-xs-12"><%= task.name %></div>
                 <div class="col-xs-6"><%= task.priority_type.name %></div>
