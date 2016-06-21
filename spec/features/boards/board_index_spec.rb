@@ -2,7 +2,7 @@ require "rails_helper"
 
 feature "Board Index" do
 
-  scenario "Not logged users cannot see private boards" do
+  scenario "Not logged users can not see private boards" do
 
     public_board = create :board
     private_board = create :board, :private
